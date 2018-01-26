@@ -8,58 +8,110 @@
 
 import Foundation
 
-//
+//func wordList(In: String, Every: String) -> String {
+//    var out = [""]
+//}
 
+
+//func limiter(in: String) -> String {
+//
+//}
+
+func allPos(num: Int) -> Int {
+    return Int(Double(num * num).squareRoot())
+}
 
 for o in 1...5 {
     let correct = Int(arc4random_uniform(100))
-    print(correct)
-    var lastGuess = correct
-        for i in 1...50 {
-            print("Guess #\(i)?")
-            let guess = Int(readLine()!)!
+    //print(correct)
+    var lastGuess = 50
+        for i in 1...5 {
+            print("Guess #\(i) ?")
+            var guess = readLine()
             var out = ""
-            
-            if correct == guess {
+            while Int(guess!) == nil {
+                print("Ohhh, try again")
+                guess = readLine()
+            }
+            let uGuess = Int(guess!)!
+            if correct == uGuess {
                 print("Got it")
                 break
             }
-            if guess < correct {
+            if uGuess < correct {
                 out = "More"
             }
             else {
                 out = "Less"
             }
-            
-            print(Double((guess - correct) * (guess - correct)).squareRoot())
-            print(Double(lastGuess / 2))
-            if Double((guess - correct) * (guess - correct)).squareRoot() <= Double(correct / 2 * i) {
+            //print("\(allPos(num: uGuess - correct)) <= \(lastGuess / 2)")
+
+            if allPos(num: uGuess - correct) <= lastGuess / 2 {
                 out = "Slightly " + out
             }
             else {
                 out = "Alot " + out
             }
             print(out)
-            lastGuess = guess
+            lastGuess = uGuess
     }
     print("The answer was \(correct), Would you like to play again??")
-    var maybe = Array(readLine()!.lowercased())
-    if maybe.contains("y") {
+    if readLine()!.lowercased().contains("yes") {
         if o == 5 {
             print("This is you Fifth time playing, get a life")
         }
     }
     else {
+        print("Guess not...")
         break
     }
 }
 
+//print("2 is a prime.")
+//var total = 1
+//var max = 100000
+//for i in 3...max {
+//    var out = true
+//    for o in 2...i - 1 {
+//        if i % o == 0 {
+//            out = false
+//        }
+//    }
+//    if out {
+//        total += 1
+//        print("\(i) is a prime.")
+//    }
+//}
+//print("there are \(total) prime numbers")
 
 
-
-
-
-
+//var quit = false
+//while quit == false {
+//    var correct = Int(arc4random_uniform(100))
+//    print(correct)
+//    for i in 1...5 {
+//        var guesses = 154
+//        var guess: Int?
+//        repeat {
+//            print("Guess a #\(guesses)")
+//            guess = Int(readLine()!)
+//        } while (
+//            guess == nil || i != 1
+//        )
+//        let uGuess = guess!
+//        if uGuess == correct {
+//            print("Correct")
+//            i = 5
+//        }
+//        if uGuess > correct {
+//            print("Lower")
+//        } else {
+//            print("Higher")
+//        }
+//
+//    }
+//    quit = true
+//}
 
 
 
