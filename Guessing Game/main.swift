@@ -12,7 +12,6 @@ import Foundation
 //    var out = [""]
 //}
 
-
 //func limiter(in: String) -> String {
 //
 //}
@@ -67,51 +66,48 @@ for o in 1...5 {
     }
 }
 
-//print("2 is a prime.")
-//var total = 1
-//var max = 100000
-//for i in 3...max {
-//    var out = true
-//    for o in 2...i - 1 {
-//        if i % o == 0 {
-//            out = false
-//        }
-//    }
-//    if out {
-//        total += 1
-//        print("\(i) is a prime.")
-//    }
-//}
-//print("there are \(total) prime numbers")
+print("2 is a prime.")
+var total = 1
+var max = 100000
+for i in 3...max {
+    var out = true
+    for o in 2...i - 1 {
+        if i % o == 0 {
+            out = false
+        }
+    }
+    if out {
+        total += 1
+        print("\(i) is a prime.")
+    }
+}
+print("there are \(total) prime numbers")
 
 
-//var quit = false
-//while quit == false {
-//    var correct = Int(arc4random_uniform(100))
-//    print(correct)
-//    for i in 1...5 {
-//        var guesses = 154
-//        var guess: Int?
-//        repeat {
-//            print("Guess a #\(guesses)")
-//            guess = Int(readLine()!)
-//        } while (
-//            guess == nil || i != 1
-//        )
-//        let uGuess = guess!
-//        if uGuess == correct {
-//            print("Correct")
-//            i = 5
-//        }
-//        if uGuess > correct {
-//            print("Lower")
-//        } else {
-//            print("Higher")
-//        }
-//
-//    }
-//    quit = true
-//}
+var quit = false
+while quit == false {
+    var correct = Int(arc4random_uniform(100))
+    print(correct)
+    for i in 1...5 {
+        var guess: String?
+        repeat {
+            print("Guess a #\(i)")
+            guess = readLine()
+        } while guess! == nil
+        
+        let uGuess = Int(guess!)!
+        if uGuess == correct {
+            print("Correct")
+            break
+        }
+        if uGuess > correct {
+            print("Lower")
+        } else {
+            print("Higher")
+        }
+    }
+    quit = true
+}
 
 
 
