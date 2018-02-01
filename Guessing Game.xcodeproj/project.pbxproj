@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A40212722017BC990077E076 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40212712017BC990077E076 /* main.swift */; };
+		A44904D2202296B700090C83 /* guessing with classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44904D1202296B700090C83 /* guessing with classes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		A402126E2017BC990077E076 /* Guessing Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Guessing Game"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40212712017BC990077E076 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A44904D1202296B700090C83 /* guessing with classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "guessing with classes.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				A40212712017BC990077E076 /* main.swift */,
+				A44904D1202296B700090C83 /* guessing with classes.swift */,
 			);
 			path = "Guessing Game";
 			sourceTree = "<group>";
@@ -121,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40212722017BC990077E076 /* main.swift in Sources */,
+				A44904D2202296B700090C83 /* guessing with classes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
