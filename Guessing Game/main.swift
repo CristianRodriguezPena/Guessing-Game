@@ -62,10 +62,14 @@ func allPos(num: Int) -> Int {
 
 
 var game = GuessingGame(start: 1, end: 100, MaxTries: 5)
-game.remember(i: 50, o: 50)
-game.Start()
+//game.Start()
 
-
+for num in 1...10{
+    if num % 2 == 0 {
+        continue
+    }
+    print(num)
+}
 
 
 
